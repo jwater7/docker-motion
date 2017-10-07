@@ -11,5 +11,8 @@ RUN apt-get update \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
 
-CMD motion
+# 20 camera feeds max (by default Motion will use port 8080 and +1 for each camera feed)
+EXPOSE 8080-8100
+
+CMD [ "motion", "-n" ]
 
