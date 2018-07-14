@@ -7,6 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         tzdata \
+        curl \
         motion=4.0-1 \
     && apt-get autoclean \
     && apt-get autoremove \
