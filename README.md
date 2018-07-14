@@ -36,6 +36,8 @@ A sample docker-compose:
     container_name: my-motion
     volumes:
       - "/path/to/localconfig:/etc/motion"
+    environment:
+      - "TZ=America/Los_Angeles"
     restart: always
 ~~~
 
